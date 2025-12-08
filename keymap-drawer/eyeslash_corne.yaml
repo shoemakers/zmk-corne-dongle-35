@@ -48,7 +48,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: NUM & NAVIGATION}
-  - {t: '$$mdi:keyboard-esc$$', h: FUNC}
+  - FUNC
   NUM & NAVIGATION:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
