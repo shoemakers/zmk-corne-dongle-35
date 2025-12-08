@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: FUNC}
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
@@ -190,12 +190,12 @@ layers:
   - $$mdi:volume-low$$
   - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: MOUSE, h: toggle}
