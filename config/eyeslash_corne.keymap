@@ -88,10 +88,10 @@
         right_layer {
             display-name = "NUM & NAVIGATION";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3          &kp N4   &kp N5                                 &mmv MOVE_UP                     &kp N6    &kp N7     &kp N8     &kp N9     &kp N0       &trans
-&trans  &kp DEL          &kp CAPS        &kp PSCRN       &kp INS  &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &trans       &trans
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &bt BT_CLR_ALL  &trans   &trans   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &bootloader  &trans
-                                         &trans          &trans   &kp ESC                                                                 &trans    &trans     &trans
+&trans  &kp N1   &kp N2    &kp N3          &kp N4   &kp N5                                 &mmv MOVE_UP                     &kp N6    &kp N7     &kp N8     &kp N9     &kp N0       &trans
+&trans  &kp DEL  &kp CAPS  &kp PSCRN       &kp INS  &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &trans       &trans
+&trans  &trans   &trans    &bt BT_CLR_ALL  &trans   &trans   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &bootloader  &trans
+                           &trans          &trans   &kp ESC                                                                 &trans    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -124,9 +124,9 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &tog 4        &trans
-&trans  &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &out OUT_USB  &trans
-&trans  &trans  &trans    &trans     &trans     &trans      &kp C_MUTE                    &mmv MOVE_DOWN                   &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &out OUT_BLE  &trans
+&trans  &tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &tog 4  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans      &kp C_MUTE                    &mmv MOVE_DOWN                   &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans  &trans
                           &trans     &kp SPACE  &kp LSHIFT                                                                 &mkp LCLK       &mkp RCLK       &trans
             >;
 
