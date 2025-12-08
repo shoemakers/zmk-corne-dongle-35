@@ -172,7 +172,7 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:brightness-5$$
-  - '&studio_unlock'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-high$$
   - $$mdi:play-pause$$
   - {t: '$$mdi:transfer$$', type: trans}
