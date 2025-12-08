@@ -11,11 +11,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define WIN   0
-#define MAC   1
-#define RIG   2
-#define LEF   3
-#define TRI   4
-#define MOUSE 5
+#define RIG   1
+#define LEF   2
+#define TRI   3
+#define MOUSE 4
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
