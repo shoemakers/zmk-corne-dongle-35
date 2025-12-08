@@ -186,7 +186,7 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:brightness-7$$
-  - '&soft_off'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-low$$
   - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
