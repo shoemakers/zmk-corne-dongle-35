@@ -48,7 +48,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: NUM & NAVIGATION}
-  - {t: '$$mdi:keyboard-esc$$', h: DEFAULT}
+  - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
   NUM & NAVIGATION:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
@@ -195,4 +195,4 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
