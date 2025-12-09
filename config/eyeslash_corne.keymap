@@ -79,10 +79,10 @@
         right_layer {
             display-name = "NUM & NAVIGATION";
             bindings = <
-&trans  &trans   &kp N1  &kp N2  &kp N3  &trans                                        &mmv MOVE_UP                     &kp PG_UP  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_DOWN  &trans
-&trans  &kp DEL  &kp N4  &kp N5  &kp N6  &kp LEFT_SHIFT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans         &trans
-&trans  &trans   &kp N7  &kp N8  &kp N9  &kp N0          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans     &kp INS         &trans        &kp DEL    &trans         &trans
-                         &trans  &trans  &kp ESC                                                                        &trans     &trans          &trans
+&trans  &trans   &kp N1        &kp N2           &kp N3           &trans                                        &mmv MOVE_UP                     &kp PG_UP  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_DOWN  &trans
+&trans  &kp DEL  &ht LCTRL N4  &ht LEFT_WIN N5  &ht LEFT_ALT N6  &kp LEFT_SHIFT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans         &trans
+&trans  &trans   &kp N7        &kp N8           &kp N9           &kp N0          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans     &kp INS         &trans        &kp DEL    &trans         &trans
+                               &trans           &trans           &kp LEFT_SHIFT                                                                 &trans     &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -94,7 +94,7 @@
 &trans  &kp EXCL  &kp AT                         &kp HASH                 &kp DLLR                       &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS             &kp ASTRK            &kp GRAVE        &kp TILDE  &trans
 &trans  &kp DQT   &ht LEFT_CONTROL LEFT_BRACKET  &ht LEFT_WIN LEFT_BRACE  &ht LEFT_ALT LEFT_PARENTHESIS  &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp FSLH   &ht RIGHT_ALT MINUS  &ht RIGHT_WIN EQUAL  &ht RCTRL COLON  &kp SEMI   &trans
 &trans  &kp SQT   &kp RBKT                       &kp RBRC                 &kp RPAR                       &kp SPACE  &trans                    &mmv MOVE_DOWN                   &kp BSLH   &kp UNDER            &kp PLUS             &kp PIPE         &kp QMARK  &trans
-                                                 &trans                   &trans                         &trans                                                                &tog 4     &kp BACKSPACE        &kp RIGHT_SHIFT
+                                                 &trans                   &trans                         &trans                                                                &kp SPACE  &kp BACKSPACE        &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -103,9 +103,9 @@
         layer_3 {
             display-name = "Func";
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3     &kp F4   &trans                    &trans          &trans  &trans  &trans      &trans       &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7     &kp F8   &trans            &trans  &trans  &trans  &trans  &trans  &kp RSHIFT  &trans       &trans  &trans
-&trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans  &trans            &trans          &trans  &trans  &trans      &bootloader  &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3     &kp F4   &trans                    &trans          &trans  &trans  &trans      &trans  &trans       &trans
+&trans  &kp F5  &kp F6   &kp F7     &kp F8   &trans            &trans  &trans  &trans  &trans  &trans  &kp RSHIFT  &trans  &trans       &trans
+&trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans  &trans            &trans          &trans  &trans  &trans      &trans  &bootloader  &trans
                          &kp LCTRL  &trans   &trans                                    &trans  &trans  &trans
             >;
 
@@ -115,7 +115,7 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &tog 4  &trans
+&trans  &trans  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
 &trans  &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans    &trans     &trans     &trans      &kp C_MUTE                    &mmv MOVE_DOWN                   &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans  &trans
                           &trans     &kp SPACE  &kp LSHIFT                                                                 &mkp LCLK       &mkp RCLK       &trans
