@@ -116,8 +116,8 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &tog 4  &trans
-&trans  &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &tog 4  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans    &trans     &trans     &trans      &kp C_MUTE                    &mmv MOVE_DOWN                   &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans  &trans
                           &trans     &kp SPACE  &kp LSHIFT                                                                 &mkp LCLK       &mkp RCLK       &trans
             >;
