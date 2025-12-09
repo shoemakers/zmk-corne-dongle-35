@@ -44,8 +44,8 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
+  - $$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: NUM & NAVIGATION}
   - {t: '$$mdi:keyboard-esc$$', h: Func}
@@ -114,17 +114,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '"'
-  - {t: '[', s: '{'}
-  - '{'
-  - (
+  - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
+  - {t: '{', h: LEFT WIN}
+  - {t: (, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: /, s: '?'}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
-  - ':'
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
+  - {t: '=', h: RIGHT WIN, s: +}
+  - {t: ':', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -132,7 +132,7 @@ layers:
   - {t: ']', s: '}'}
   - '}'
   - )
-  - $$mdi:progress-download$$
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: \, s: '|'}
@@ -142,10 +142,10 @@ layers:
   - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: MOUSE, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: MOUSE, h: toggle}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   Func:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -187,7 +187,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
