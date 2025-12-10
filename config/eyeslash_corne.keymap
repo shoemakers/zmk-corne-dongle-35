@@ -79,10 +79,10 @@
         right_layer {
             display-name = "NUM & SYMBOL";
             bindings = <
-&none  &kp N1     &kp N2          &kp N3            &kp N4             &kp N5                                   &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0                     &none
-&none  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none     &kp HOME  &kp UP    &kp END    &kp ENTER                  &none
-&none  &kp GRAVE  &kp EQUAL       &kp SEMI          &kp BSLH           &kp SQT    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp FSLH  &kp LEFT  &kp DOWN  &kp RIGHT  &ht RIGHT_SHIFT BACKSPACE  &none
-                                  &none             &none              &none                                                                     &none     &none     &none
+&none  &kp N1     &kp N2          &kp N3            &kp N4             &kp N5                                   &mmv MOVE_UP                     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0                     &none
+&none  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &kp HOME   &kp UP    &kp END    &kp ENTER                  &none
+&none  &kp GRAVE  &kp EQUAL       &kp SEMI          &kp BSLH           &kp SQT    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp FSLH   &kp LEFT   &kp DOWN  &kp RIGHT  &ht RIGHT_SHIFT BACKSPACE  &none
+                                  &none             &none              &none                                                                     &kp RCTRL  &kp SPACE  &kp RWIN
             >;
 
             sensor-bindings = <&scroll_encoder>;
