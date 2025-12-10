@@ -15,8 +15,8 @@ layers:
   - P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - A
-  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: LGUI}
   - {t: F, h: '$$mdi:apple-keyboard-option$$'}
   - G
@@ -45,7 +45,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-esc$$', h: FUN&MOUSE}
   - {t: '$$mdi:keyboard-space$$', h: NUM & SYMBOL}
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-esc$$
