@@ -114,8 +114,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
+  - INS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
