@@ -92,8 +92,8 @@
             display-name = "NUM & NAVIGATION";
             bindings = <
 &trans  &trans   &kp N1        &kp N2           &kp N3           &trans                                        &mmv MOVE_UP                     &kp PG_UP  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_DOWN  &trans
-&trans  &kp DEL  &ht LCTRL N4  &ht LEFT_WIN N5  &ht LEFT_ALT N6  &kp LEFT_SHIFT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans         &trans
-&trans  &trans   &kp N7        &kp N8           &kp N9           &kp N0          &kp C_MUTE                    &mmv MOVE_DOWN                   &trans     &kp INS         &trans        &kp DEL    &trans         &trans
+&trans  &kp DEL  &ht LCTRL N4  &ht LEFT_WIN N5  &ht LEFT_ALT N6  &kp LEFT_SHIFT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DEL    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans         &trans
+&trans  &trans   &kp N7        &kp N8           &kp N9           &kp N0          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CAPS   &kp INS         &trans        &kp DEL    &trans         &trans
                                &trans           &trans           &kp LEFT_SHIFT                                                                 &trans     &trans          &trans
             >;
 
