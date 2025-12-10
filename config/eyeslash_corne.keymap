@@ -67,58 +67,34 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-				&none &kp Q         &kp W        &kp E       &kp R        &kp T                                 &mmv MOVE_UP                     &kp Y            &kp U       &kp I       &kp O        &kp P           &none   
-				&none &ht LSHIFT A  &ht LCTRL S  &ht LGUI D  &ht LALT F   &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H            &ht RALT J  &ht RGUI K  &ht RCTRL L  &kp ENTER       &none
-				&none &kp Z         &kp X        &kp C       &kp V        &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N            &kp M       &kp COMMA   &kp DOT      &kp BACKSPACE   &none
-												 &lt 4 ESC   &lt 2 SPACE  &kp TAB                                                                &kp RIGHT_SHIFT  &lt 3 TAB   &lt 1 ESC
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        left_layer {
-            display-name = "SYMBOL";
-            bindings = <
-				&none &kp EXCL            &kp AT                         &kp HASH                 &kp DLLR                       &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS             &kp ASTRK            &kp GRAVE        &kp TILDE             &none
-				&none &ht LEFT_SHIFT DQT  &ht LEFT_CONTROL LEFT_BRACKET  &ht LEFT_WIN LEFT_BRACE  &ht LEFT_ALT LEFT_PARENTHESIS  &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp FSLH   &ht RIGHT_ALT MINUS  &ht RIGHT_WIN EQUAL  &ht RCTRL COLON  &ht RIGHT_SHIFT SEMI  &none
-				&none &kp SQT             &kp RBKT                       &kp RBRC                 &kp RPAR                       &kp SPACE  &trans                    &mmv MOVE_DOWN                   &kp BSLH   &kp UNDER            &kp PLUS             &kp PIPE         &kp QMARK             &none
-																		 &trans                   &trans                         &trans                                                                &kp SPACE  &kp BACKSPACE        &kp RIGHT_SHIFT
+&none  &kp Q             &kp W        &kp E       &kp R        &kp T                                 &mmv MOVE_UP                     &kp Y            &kp U       &kp I       &kp O        &kp P                      &none
+&none  &kp A             &ht LCTRL S  &ht LGUI D  &ht LALT F   &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H            &ht RALT J  &ht RGUI K  &ht RCTRL L  &kp ENTER                  &none
+&none  &ht LEFT_SHIFT Z  &kp X        &kp C       &kp V        &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N            &kp M       &kp COMMA   &kp DOT      &ht RIGHT_SHIFT BACKSPACE  &none
+                                      &lt 2 ESC   &lt 1 SPACE  &kp TAB                                                                &kp RIGHT_SHIFT  &kp TAB     &kp ESC
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         right_layer {
-            display-name = "NUM & NAVIGATION";
+            display-name = "NUM & SYMBOL";
             bindings = <
-				&none &trans          &kp N1        &kp N2           &kp N3           &trans                                        &mmv MOVE_UP                     &kp PG_UP  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_DOWN  &none
-				&none &kp LEFT_SHIFT  &ht LCTRL N4  &ht LEFT_WIN N5  &ht LEFT_ALT N6  &kp LEFT_SHIFT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DEL    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans         &none
-				&none &trans          &kp N7        &kp N8           &kp N9           &kp N0          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CAPS   &kp INS         &trans        &kp DEL    &trans         &none
-													&trans           &trans           &kp LEFT_SHIFT                                                                 &trans     &trans          &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_3 {
-            display-name = "Func";
-            bindings = <
-				&none &kp F1  &kp F2   &kp F3     &kp F4   &trans                    &trans          &trans  &trans  &trans      &trans  &trans       &none
-				&none &kp F5  &kp F6   &kp F7     &kp F8   &trans            &trans  &trans  &trans  &trans  &trans  &kp RSHIFT  &trans  &trans       &none
-				&none &kp F9  &kp F10  &kp F11    &kp F12  &trans  &trans            &trans          &trans  &trans  &trans      &trans  &bootloader  &none
-									   &kp LCTRL  &trans   &trans                                    &trans  &trans  &trans
+&none  &kp N1     &kp N2          &kp N3            &kp N4             &kp N5                                   &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0                     &none
+&none  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none     &kp HOME  &kp UP    &kp END    &kp ENTER                  &none
+&none  &kp GRAVE  &kp EQUAL       &kp SEMI          &kp BSLH           &kp SQT    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp FSLH  &kp LEFT  &kp DOWN  &kp RIGHT  &ht RIGHT_SHIFT BACKSPACE  &none
+                                  &none             &none              &none                                                                     &none     &none     &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         mouse {
-            display-name = "MOUSE";
+            display-name = "FUN&MOUSE";
             bindings = <
-				&none &trans  &mkp MB4  &mkp MCLK  &mkp MB5   &trans                                    &mmv MOVE_UP                     &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &none
-				&none &trans  &trans    &trans     &trans     &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DEL         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &none
-				&none &trans  &trans    &trans     &trans     &trans      &kp C_MUTE                    &mmv MOVE_DOWN                   &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans  &none
-									    &trans     &kp SPACE  &kp LSHIFT                                                                 &mkp LCLK       &mkp RCLK       &trans
+&none      &none           &none  &none   &none  &none                                &mmv MOVE_UP                     &kp F2          &kp F5          &kp F6          &kp F8           &kp F9           &none
+&kp LCTRL  &kp LEFT_SHIFT  &none  &none   &none  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&none      &none           &none  &none   &none  &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &none
+                                  &trans  &none  &none                                                                 &mkp LCLK       &mkp RCLK       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
