@@ -91,10 +91,10 @@
         mouse {
             display-name = "FUN&MOUSE";
             bindings = <
-&none      &none           &none  &none   &none  &none                                &mmv MOVE_UP                     &kp F2          &kp F5          &kp F6          &kp F8           &kp F9           &none
-&kp LCTRL  &kp LEFT_SHIFT  &none  &none   &none  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&none      &none           &none  &none   &none  &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &none
-                                  &trans  &none  &none                                                                 &mkp LCLK       &mkp RCLK       &trans
+&none      &none           &none    &none    &none  &none                                &mmv MOVE_UP                     &kp F2          &kp F5          &kp F6          &kp F8           &kp F9           &none
+&kp LCTRL  &kp LEFT_SHIFT  &kp DEL  &kp INS  &none  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&none      &none           &none    &none    &none  &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &none
+                                    &trans   &none  &none                                                                 &mkp LCLK       &mkp RCLK       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
