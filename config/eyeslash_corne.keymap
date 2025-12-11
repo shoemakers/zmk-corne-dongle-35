@@ -61,6 +61,21 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ESCCOMBO {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        deletecombo {
+            bindings = <&kp DEL>;
+            key-positions = <11 10>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
