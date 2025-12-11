@@ -77,10 +77,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q  &kp W  &kp E          &kp R        &kp T                                      &mmv MOVE_UP                     &kp Y          &kp U      &kp I            &kp O      &kp P          &none
-&none  &kp A  &kp S  &kp D          &kp F        &kp G                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &kp J      &kp K            &kp L      &kp ENTER      &none
-&none  &kp Z  &kp X  &kp C          &kp V        &kp DOT       &kp SPACE                    &mmv MOVE_DOWN                   &kp B          &kp N      &kp M            &kp COMMA  &kp BACKSPACE  &none
-                     &ht LCTRL ESC  &lt 2 SPACE  &kp LEFT_ALT                                                                &kp RIGHT_WIN  &lt 1 TAB  &kp RIGHT_SHIFT
+&none  &kp Q  &kp W  &kp E      &kp R            &kp T                                      &mmv MOVE_UP                     &kp Y          &kp U      &kp I            &kp O    &kp P          &none
+&none  &kp A  &kp S  &kp D      &kp F            &kp G                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &kp J      &kp K            &kp L    &kp ENTER      &none
+&none  &kp Z  &kp X  &kp C      &kp V            &kp B         &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M      &kp COMMA        &kp DOT  &kp BACKSPACE  &none
+                     &lt 2 ESC  &ht LCTRL SPACE  &kp LEFT_ALT                                                                &kp RIGHT_WIN  &lt 1 TAB  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
