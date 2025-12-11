@@ -45,7 +45,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:apple-keyboard-caps$$', h: FUN&MOUSE}
   - {t: '$$mdi:keyboard-space$$', h: NUM & SYMBOL}
-  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-esc$$
@@ -153,3 +153,5 @@ combos:
   l: [DEFAULT]
 - p: [11, 10]
   k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [14, 15]
+  k: $$mdi:keyboard-tab$$
