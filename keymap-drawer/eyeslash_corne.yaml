@@ -147,3 +147,9 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
+  l: [DEFAULT]
+- p: [11, 10]
+  k: $$mdi:backspace-reverse-outline$$
