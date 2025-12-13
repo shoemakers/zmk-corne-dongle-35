@@ -77,10 +77,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q  &kp W  &kp E      &kp R            &kp T                                      &mmv MOVE_UP                     &kp Y          &kp U      &kp I            &kp O    &kp P          &none
-&none  &kp A  &kp S  &kp D      &kp F            &kp G                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &kp J      &kp K            &kp L    &kp ENTER      &none
-&none  &kp Z  &kp X  &kp C      &kp V            &kp B         &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M      &kp COMMA        &kp DOT  &kp BACKSPACE  &none
-                     &lt 2 ESC  &ht LCTRL SPACE  &kp LEFT_ALT                                                                &ht RCTRL DEL  &lt 1 TAB  &kp RIGHT_SHIFT
+&none  &kp Q       &kp W        &kp E         &kp R       &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U            &kp I         &kp O        &kp P         &none
+&none  &ht LWIN A  &ht LCTRL S  &ht LSHIFT D  &ht LALT F  &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &ht RIGHT_ALT J  &ht RSHIFT K  &ht LCTRL L  &ht RWIN SQT  &none
+&none  &kp Z       &kp X        &kp C         &kp V       &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M            &kp COMMA     &kp DOT      &kp FSLH      &none
+                                &lt 2 ESC     &kp SPACE   &kp TAB                                                                &kp ENTER  &lt 1 BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -89,10 +89,10 @@
         right_layer {
             display-name = "NUM & SYMBOL";
             bindings = <
-&none  &kp N1     &kp N2          &kp N3            &kp N4             &kp N5                                    &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &none
-&none  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp FSLH  &kp HOME  &kp UP    &kp END    &kp ENTER      &none
-&none  &kp GRAVE  &kp EQUAL       &kp SEMI          &kp BSLH           &kp SQT     &kp C_MUTE                    &mmv MOVE_DOWN                   &none     &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &none
-                                  &kp LEFT_SHIFT    &kp SPACE          &kp DELETE                                                                 &none     &none     &none
+&none  &none         &none      &none       &none     &none                                    &mmv MOVE_UP                     &kp K_REDO    &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO  &none
+&none  &kp LEFT_WIN  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp MINUS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPSLOCK  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT   &none
+&none  &none         &none      &none       &none     &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INSERT    &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
+                                &none       &none     &none                                                                     &kp ENTER     &kp BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -101,13 +101,22 @@
         mouse {
             display-name = "FUN&MOUSE";
             bindings = <
-&none  &none      &none       &none    &none    &none                                  &mmv MOVE_UP                     &kp F2          &kp F5          &kp F6          &kp F8           &kp F9           &none
-&none  &kp LCTRL  &kp LSHIFT  &kp DEL  &kp INS  &none                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&none  &none      &none       &none    &none    &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &none
-                              &trans   &none    &kp ESC                                                                 &mkp LCLK       &mkp RCLK       &trans
+&none  &none     &none      &none       &none         &none                                &mmv MOVE_UP                     &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &none
+&none  &kp LWIN  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none     &none      &none       &none         &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &none       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &none
+                            &none       &none         &none                                                                 &mkp RCLK   &mkp LCLK       &mkp MCLK
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &none   &none          &none       &none      &none     &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL  &kp RWIN  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &none   &trans            &trans          &none   &none          &none       &none      &none     &trans
+                        &trans  &kp N0  &trans                                    &trans  &trans         &trans
+            >;
         };
     };
 };
