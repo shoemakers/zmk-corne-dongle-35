@@ -81,9 +81,9 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &none         &none      &none       &none     &none                                &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)      &kp RC(C)  &kp RC(X)  &kp RC(Z)  &none
-&none  &kp LEFT_WIN  &kp LCTRL  &kp LSHIFT  &kp LALT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPSLOCK   &kp HOME       &kp UP     &kp END    &none      &none
-&none  &none         &none      &none       &none     &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INSERT     &kp LEFT       &kp DOWN   &kp RIGHT  &none      &none
+&none  &none         &none      &none       &none     &none                                &mmv MOVE_UP                     &kp CAPS       &kp HOME       &kp UP     &kp END    &none      &none
+&none  &kp LEFT_WIN  &kp LCTRL  &kp LSHIFT  &kp LALT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS        &kp LEFT       &kp DOWN   &kp RIGHT  &none      &none
+&none  &none         &none      &none       &none     &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RS(RC(Z))  &kp RC(V)      &kp RC(C)  &kp RC(X)  &kp RC(Z)  &none
                                 &none       &none     &none                                                                 &kp ENTER      &kp BACKSPACE  &kp DEL
             >;
 
