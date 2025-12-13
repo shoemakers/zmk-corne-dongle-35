@@ -100,7 +100,7 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   mouse:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
   - '&mkp MB4'
   - $$mdi:mouse-scroll-wheel$$
   - '&mkp MB5'
