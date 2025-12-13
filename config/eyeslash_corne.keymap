@@ -77,17 +77,17 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q       &kp W        &kp E         &kp R       &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U            &kp I         &kp O        &kp P         &none
-&none  &ht LWIN A  &ht LCTRL S  &ht LSHIFT D  &ht LALT F  &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &ht RIGHT_ALT J  &ht RSHIFT K  &ht LCTRL L  &ht RWIN SQT  &none
-&none  &kp Z       &kp X        &kp C         &kp V       &kp B    &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M            &kp COMMA     &kp DOT      &kp FSLH      &none
-                                &lt 2 ESC     &kp SPACE   &kp TAB                                                                &kp ENTER  &lt 1 BACKSPACE  &kp DEL
+&none  &kp Q       &kp W        &kp E         &kp R        &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P         &none
+&none  &ht LWIN A  &ht LCTRL S  &ht LSHIFT D  &ht LALT F   &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &ht RIGHT_ALT J  &ht RSHIFT K  &ht LCTRL L  &ht RWIN SQT  &none
+&none  &kp Z       &kp X        &kp C         &kp V        &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH      &none
+                                &lt 6 ESC     &lt 1 SPACE  &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE  &lt 5 DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        right_layer {
-            display-name = "NUM & SYMBOL";
+        Nav {
+            display-name = "Nav";
             bindings = <
 &none  &none         &none      &none       &none     &none                                &mmv MOVE_UP                     &kp K_REDO    &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO  &none
 &none  &kp LEFT_WIN  &kp LCTRL  &kp LSHIFT  &kp LALT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPSLOCK  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT   &none
@@ -108,9 +108,10 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "mouse";
         };
 
-        layer_3 {
+        Num {
             bindings = <
 &trans  &kp LEFT_BRACKET  &kp N7  &kp N8      &kp N9  &kp RIGHT_BRACKET                    &trans          &none   &none          &none       &none      &none     &trans
 &trans  &kp SEMI          &kp N4  &kp N5      &kp N6  &kp EQUAL                    &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL  &kp RWIN  &trans
@@ -119,9 +120,10 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "num";
         };
 
-        layer_4 {
+        Symbol {
             bindings = <
 &trans  &kp LEFT_BRACKET  &kp AMPS    &kp ASTRK              &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET                    &trans          &none   &none          &none       &none      &none     &trans
 &trans  &kp SEMI          &kp DOLLAR  &kp PERCENT            &kp CARET             &kp EQUAL                    &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL  &kp RWIN  &trans
@@ -130,17 +132,28 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "symbol";
         };
 
-        layer_5 {
+        Fun {
             bindings = <
-&trans  &none  &kp F7  &kp F8  &kp F9     &none                      &trans          &none   &none          &none       &none      &none     &trans
-&trans  &none  &kp F4  &kp F5  &kp F6     &none              &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL  &kp RWIN  &trans
-&trans  &none  &kp F1  &kp F2  &kp F3     &none    &trans            &trans          &none   &none          &none       &none      &none     &trans
-                       &none   &kp SPACE  &kp TAB                                    &trans  &trans         &trans
+&trans  &none  &kp F7  &kp F8     &kp F9     &none                      &trans          &none   &none          &none       &none      &none     &trans
+&trans  &none  &kp F4  &kp F5     &kp F6     &none              &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL  &kp RWIN  &trans
+&trans  &none  &kp F1  &kp F2     &kp F3     &none    &trans            &trans          &none   &none          &none       &none      &none     &trans
+                       &mkp RCLK  &kp SPACE  &kp TAB                                    &trans  &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "Fun";
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
