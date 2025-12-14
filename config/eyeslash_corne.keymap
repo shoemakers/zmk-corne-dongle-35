@@ -62,16 +62,7 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos {
-        compatible = "zmk,combos";
-
-        lock-mouse {
-            bindings = <&to 2>;
-            key-positions = <1 2>;
-            layers = <2>;
-            require-prior-idle-ms = <70>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
