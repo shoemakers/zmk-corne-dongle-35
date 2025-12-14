@@ -343,3 +343,7 @@ layers:
   - PLAY PAUSE
   - PLAY
   - $$mdi:volume-off$$
+combos:
+- p: [1, 2]
+  k: {t: mouse, h: toggle}
+  l: [mouse]
