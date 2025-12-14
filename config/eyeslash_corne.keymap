@@ -94,7 +94,7 @@
             display-name = "FUN&MOUSE";
             bindings = <
 &none  &kp ESC   &mkp MB4   &mkp MCLK   &mkp MB5      &none                                  &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)       &kp RC(C)     &kp RC(X)       &kp RC(Z)        &none
-&none  &kp LWIN  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none          &mmv MOVE_LEFT  &mmv MOVE_UP  &msc SCRL_DOWN  &mmv MOVE_RIGHT  &none
+&none  &kp LWIN  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none          &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &none  &none     &none      &none       &none         &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &none          &kp LEFT        &kp UP_ARROW  &kp DOWN        &kp RIGHT        &none
                             &none       &none         &none                                                                   &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
