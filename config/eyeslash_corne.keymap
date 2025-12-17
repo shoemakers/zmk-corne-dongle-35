@@ -155,7 +155,7 @@
         button {
             bindings = <
 &trans  &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)                    &trans          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))  &trans
-&trans  &kp LGUI       &kp LALT   &kp LCTRL  &kp LSHFT  &none                &trans  &trans  &trans  &none      &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI       &trans
+&trans  &kp LGUI       &kp LALT   &kp LCTRL  &kp LSHFT  &kp DEL              &trans  &trans  &trans  &kp DEL    &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI       &trans
 &trans  &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans            &trans          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))  &trans
                                   &mkp MCLK  &mkp RCLK  &mkp LCLK                                    &mkp LCLK  &mkp RCLK  &mkp MCLK
             >;
