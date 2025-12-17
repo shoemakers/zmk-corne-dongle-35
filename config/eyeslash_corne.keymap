@@ -72,7 +72,7 @@
             bindings = <
 &none  &kp Q       &kp W       &kp E        &kp R         &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I        &kp O       &kp P          &none
 &none  &ht LWIN A  &ht LALT S  &ht LCTRL D  &ht LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &ht RSHIFT J     &ht RCTRL K  &ht RALT L  &ht RWIN SEMI  &none
-&none  &kp Z       &kp X       &kp C        &kp V         &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA    &kp DOT     &kp FSLH       &none
+&none  &lt 7 Z     &kp X       &kp C        &kp V         &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA    &kp DOT     &lt 7 FSLH     &none
                                &lt 6 ESC    &lt 1 SPACE   &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE  &lt 5 DEL
             >;
 
@@ -150,6 +150,17 @@
 
             sensor-bindings = <&scroll_encoder>;
             label = "Media";
+        };
+
+        button {
+            bindings = <
+&trans  &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)                    &trans          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))  &trans
+&trans  &kp LGUI       &kp LALT   &kp LCTRL  &kp LSHFT  &none                &trans  &trans  &trans  &none      &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI       &trans
+&trans  &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans            &trans          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))  &trans
+                                  &mkp MCLK  &mkp RCLK  &mkp LCLK                                    &mkp LCLK  &mkp RCLK  &mkp MCLK
+            >;
+
+            label = "button";
         };
     };
 };
