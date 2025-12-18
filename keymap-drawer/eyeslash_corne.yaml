@@ -346,15 +346,15 @@ layers:
   button:
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+Ctl+Z
-  - Ctl+V
-  - Ctl+C
   - Ctl+X
+  - Ctl+C
+  - Ctl+V
   - Ctl+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
-  - Ctl+X
-  - Ctl+C
   - Ctl+V
+  - Ctl+C
+  - Ctl+X
   - Sft+Ctl+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -374,16 +374,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Sft+Ctl+Z, type: held}
-  - Ctl+V
-  - Ctl+C
   - Ctl+X
+  - Ctl+C
+  - Ctl+V
   - Ctl+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
-  - Ctl+X
-  - Ctl+C
   - Ctl+V
+  - Ctl+C
+  - Ctl+X
   - {t: Sft+Ctl+Z, type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-scroll-wheel$$
