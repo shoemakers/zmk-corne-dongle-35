@@ -359,7 +359,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+A
   - AltGr+Ctl+A
   - Ctl+Sft+A
   - $$mdi:backspace-reverse-outline$$
@@ -369,7 +369,7 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - Ctl+Sft+A
   - Ctl+AltGr+A
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+A
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
