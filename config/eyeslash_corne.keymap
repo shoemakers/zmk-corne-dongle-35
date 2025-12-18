@@ -155,7 +155,7 @@
         button {
             bindings = <
 &trans  &kp LS(LC(Z))  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(Z)                    &trans          &kp LC(Z)  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LS(LC(Z))  &trans
-&trans  &none          &none      &kp RA(RC(A))  &kp LC(LS(A))  &kp DEL              &trans  &trans  &trans  &kp DEL    &kp RC(RS(A))  &kp RC(RA(A))  &none      &none          &trans
+&trans  &none          &kp LC(A)  &kp RA(RC(A))  &kp LC(LS(A))  &kp DEL              &trans  &trans  &trans  &kp DEL    &kp RC(RS(A))  &kp RC(RA(A))  &kp RC(A)  &none          &trans
 &trans  &kp LS(LC(Z))  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(Z)  &trans            &trans          &kp LC(Z)  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LS(LC(Z))  &trans
                                   &mkp MCLK      &mkp RCLK      &mkp LCLK                                    &mkp LCLK  &mkp RCLK      &mkp MCLK
             >;
