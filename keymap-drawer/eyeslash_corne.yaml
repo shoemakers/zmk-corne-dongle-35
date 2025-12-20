@@ -51,11 +51,11 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
   Nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+Sft+Z
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - Ctl+Sft+Z
   - Ctl+V
@@ -345,17 +345,17 @@ layers:
   - $$mdi:volume-off$$
   button:
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+Ctl+Z
+  - Ctl+Z
   - Ctl+X
   - Ctl+C
   - Ctl+V
-  - Ctl+Z
+  - Ctl+Sft+Z
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
+  - Ctl+Sft+Z
   - Ctl+V
   - Ctl+C
   - Ctl+X
-  - Sft+Ctl+Z
+  - Ctl+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -373,18 +373,18 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Sft+Ctl+Z, type: held}
+  - {t: Ctl+Z, type: held}
   - Ctl+X
   - Ctl+C
   - Ctl+V
-  - Ctl+Z
+  - Ctl+Sft+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
+  - Ctl+Sft+Z
   - Ctl+V
   - Ctl+C
   - Ctl+X
-  - {t: Sft+Ctl+Z, type: held alternate}
+  - {t: Ctl+Z, type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
