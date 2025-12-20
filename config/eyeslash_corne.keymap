@@ -85,10 +85,10 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &none         &none     &none      &none       &none                                &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)      &kp RC(C)    &kp RC(X)      &kp RC(Z)  &none
-&none  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHIFT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS       &kp LEFT       &kp DOWN     &kp UP         &kp RIGHT  &none
-&none  &none         &none     &none      &none       &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INS        &kp HOME       &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none
-                               &none      &none       &none                                                                 &kp ENTER      &kp BACKSPACE  &kp DEL
+&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)  &kp LC(V)   &kp LC(LS(Z))                                &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)      &kp RC(C)    &kp RC(X)      &kp RC(Z)  &none
+&none  &kp LEFT_WIN  &kp LALT   &kp LCTRL  &kp LSHIFT  &none                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS       &kp LEFT       &kp DOWN     &kp UP         &kp RIGHT  &none
+&none  &none         &none      &none      &none       &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INS        &kp HOME       &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none
+                                &none      &none       &none                                                                         &kp ENTER      &kp BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -157,10 +157,10 @@
 
         button {
             bindings = <
-&trans  &kp LS(LC(Z))  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(Z)                    &trans          &kp LC(Z)  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LS(LC(Z))  &trans
-&trans  &none          &kp LC(A)  &kp RA(RC(A))  &kp LC(LS(A))  &kp DEL              &trans  &trans  &trans  &kp DEL    &kp RC(RS(A))  &kp RC(RA(A))  &kp RC(A)  &none          &trans
-&trans  &kp LS(LC(Z))  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(Z)  &trans            &trans          &kp LC(Z)  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LS(LC(Z))  &trans
-                                  &mkp MCLK      &mkp RCLK      &mkp LCLK                                    &mkp LCLK  &mkp RCLK      &mkp MCLK
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(LS(Z))                    &trans          &kp LC(LS(Z))  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LC(Z)  &trans
+&trans  &none      &kp LC(A)  &kp RA(RC(A))  &kp LC(LS(A))  &kp DEL                  &trans  &trans  &trans  &kp DEL        &kp RC(RS(A))  &kp RC(RA(A))  &kp RC(A)  &none      &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)      &kp LC(LS(Z))  &trans            &trans          &kp LC(LS(Z))  &kp LC(V)      &kp LC(C)      &kp LC(X)  &kp LC(Z)  &trans
+                              &mkp MCLK      &mkp RCLK      &mkp LCLK                                        &mkp LCLK      &mkp RCLK      &mkp MCLK
             >;
 
             label = "button";
