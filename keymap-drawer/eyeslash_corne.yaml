@@ -343,3 +343,12 @@ layers:
   - PLAY PAUSE
   - PLAY
   - $$mdi:volume-off$$
+combos:
+- p: [11, 10]
+  k: {t: '=', s: +}
+  l: [DEFAULT]
+- p: [9, 10]
+  k: {t: '-', s: _}
+- p: [26, 25]
+  k: {t: \, s: '|'}
+  l: [DEFAULT]
