@@ -65,7 +65,26 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <11 10>;
+            layers = <0>;
+        };
+
+        sub {
+            bindings = <&kp MINUS>;
+            key-positions = <9 10>;
+        };
+
+        bslh {
+            bindings = <&kp BSLH>;
+            key-positions = <26 25>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
