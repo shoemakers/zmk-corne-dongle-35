@@ -8,6 +8,7 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
+
   projects:
     - name: hammerbeam-slideshow
       remote: gpeye
@@ -16,26 +17,33 @@ manifest:
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
-    
-    # ZMK modules
+
+    # Add ZMK modules from configuration 1
     - name: zmk-adaptive-key
+      remote: zmkfirmware
       path: modules/zmk/adaptive-key
     - name: zmk-auto-layer
+      remote: zmkfirmware
       path: modules/zmk/auto-layer
     - name: zmk-helpers
+      remote: zmkfirmware
       path: modules/zmk/helpers
     - name: zmk-leader-key
+      remote: zmkfirmware
       path: modules/zmk/leader-key
     - name: zmk-tri-state
+      remote: zmkfirmware
       path: modules/zmk/tri-state
     - name: zmk-unicode
+      remote: zmkfirmware
       path: modules/zmk/unicode
-      
-    - name: prospector-zmk-module                 # <--- and these
-      remote: tokyo2006                          # <---
+
+    - name: prospector-zmk-module
+      remote: tokyo2006
       revision: change_spi2
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
+
   self:
     path: config
