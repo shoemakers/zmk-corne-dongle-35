@@ -15,7 +15,7 @@ manifest:
       revision: main 
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: v0.3.0s  
       import: app/west.yml
 
     # Add ZMK modules from configuration 1
@@ -37,6 +37,10 @@ manifest:
     - name: zmk-unicode
       remote: zmkfirmware
       path: modules/zmk/unicode
+      
+    - name: zephyr
+      remote: zmkfirmware
+      revision: v3.5.0+zmk-fixes
 
     - name: prospector-zmk-module
       remote: tokyo2006
