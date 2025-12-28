@@ -84,6 +84,12 @@
             key-positions = <26 25>;
             layers = <0>;
         };
+
+        sqt {
+            bindings = <&kp SQT>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
     };
 
     keymap {
