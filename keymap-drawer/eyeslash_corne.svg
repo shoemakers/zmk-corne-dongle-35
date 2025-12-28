@@ -584,6 +584,11 @@ rect.held, rect.combo.held {
 <text x="868" y="98" class="combo tap">\</text>
 <text x="868" y="87" class="combo shifted">|</text>
 </g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="742" y="18" width="28" height="26" class="combo"/>
+<text x="756" y="31" class="combo tap">&#x27;</text>
+<text x="756" y="20" class="combo shifted">&quot;</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-Nav">

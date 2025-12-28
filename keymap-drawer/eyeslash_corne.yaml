@@ -352,3 +352,6 @@ combos:
 - p: [26, 25]
   k: {t: \, s: '|'}
   l: [DEFAULT]
+- p: [8, 9]
+  k: {t: '''', s: '"'}
+  l: [DEFAULT]
