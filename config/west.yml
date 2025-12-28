@@ -37,9 +37,6 @@ manifest:
       remote: urob
       revision: v0.3 # set to same as ZMK version above
       
-    - name: zephyr
-      remote: zmkfirmware
-      revision: v3.5.0+zmk-fixes
 
     - name: prospector-zmk-module
       remote: tokyo2006
