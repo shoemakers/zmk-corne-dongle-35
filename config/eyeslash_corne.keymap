@@ -90,6 +90,11 @@
             key-positions = <8 9>;
             layers = <0>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
