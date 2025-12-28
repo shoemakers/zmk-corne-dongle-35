@@ -27,6 +27,9 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: v0.3 # set to same as ZMK version above
+    - name: zmk-helpers
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-leader-key
       remote: urob
       revision: v0.3 # set to same as ZMK version above
@@ -37,7 +40,6 @@ manifest:
       remote: urob
       revision: v0.3 # set to same as ZMK version above
       
-
     - name: prospector-zmk-module
       remote: tokyo2006
       revision: change_spi2
