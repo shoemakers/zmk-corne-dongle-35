@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: urob
+      url-base: https://github.com/urob
 
   projects:
     - name: hammerbeam-slideshow
@@ -20,23 +22,23 @@ manifest:
 
     # Add ZMK modules from configuration 1
     - name: zmk-adaptive-key
-      remote: zmkfirmware
-      path: modules/zmk/adaptive-key
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-auto-layer
-      remote: zmkfirmware
-      path: modules/zmk/auto-layer
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-helpers
-      remote: zmkfirmware
-      path: modules/zmk/helpers
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-leader-key
-      remote: zmkfirmware
-      path: modules/zmk/leader-key
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-tri-state
-      remote: zmkfirmware
-      path: modules/zmk/tri-state
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
     - name: zmk-unicode
-      remote: zmkfirmware
-      path: modules/zmk/unicode
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
       
     - name: zephyr
       remote: zmkfirmware
