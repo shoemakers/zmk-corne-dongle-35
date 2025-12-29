@@ -132,7 +132,7 @@
             display-name = "DEFAULT";
             bindings = <
 &none  &kp Q            &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P           &none
-&none  &hml LEFT_WIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RSHIFT J    &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
+&none  &hml A LEFT_WIN  &hml S LALT  &hml D LCTRL  &hml F LSHIFT  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr J RSHIFT    &hmr K RCTRL  &hmr L RALT  &hmr SEMI RWIN  &none
 &none  &kp Z            &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH        &none
                                      &lt 6 LSHIFT  &lt 1 SPACE    &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE  &lt 5 DEL
             >;
