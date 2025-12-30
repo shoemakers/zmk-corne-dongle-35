@@ -81,37 +81,7 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos {
-        compatible = "zmk,combos";
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <11 10>;
-            layers = <0>;
-        };
-
-        sub {
-            bindings = <&kp MINUS>;
-            key-positions = <9 10>;
-        };
-
-        bslh {
-            bindings = <&kp BSLH>;
-            key-positions = <26 25>;
-            layers = <0>;
-        };
-
-        sqt {
-            bindings = <&kp SQT>;
-            key-positions = <8 9>;
-            layers = <0>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <3 2>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
