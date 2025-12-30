@@ -155,8 +155,8 @@
 
         Num {
             bindings = <
-&trans  &kp N1     &kp N2   &kp N3     &kp N4            &kp N5                               &trans          &none   &none       &none      &none     &none     &trans
-&trans  &kp N6     &kp N7   &kp N8     &kp N9            &kp N0                       &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
+&trans  &kp N6     &kp N7   &kp N8     &kp N9            &kp N0                               &trans          &none   &none       &none      &none     &none     &trans
+&trans  &kp N1     &kp N2   &kp N3     &kp N4            &kp N5                       &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
 &trans  &kp GRAVE  &kp SQT  &kp BSLH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans            &trans          &none   &kp SEMI    &kp COMMA  &kp DOT   &kp FSLH  &trans
                             &kp EQUAL  &kp DOT           &kp MINUS                                            &trans  &trans      &trans
             >;
@@ -167,8 +167,8 @@
 
         Symbol {
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DOLLAR        &kp PERCENT                          &trans          &none   &none       &none      &none     &none     &trans
-&trans  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR          &kp RPAR                     &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
+&trans  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR          &kp RPAR                             &trans          &none   &none       &none      &none     &none     &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR          &kp PRCNT                    &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
 &trans  &kp GRAVE  &kp SQT   &kp BSLH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans            &trans          &none   &kp SEMI    &kp COMMA  &kp DOT   &kp FSLH  &trans
                              &kp EQUAL  &kp DOT           &kp MINUS                                            &trans  &trans      &trans
             >;
@@ -179,8 +179,8 @@
 
         Fun {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5                     &trans          &none   &none       &none      &none     &none     &trans
-&trans  &kp F6   &kp F7   &kp F8     &kp F9     &kp F10            &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
+&trans  &kp F6   &kp F7   &kp F8     &kp F9     &kp F10                    &trans          &none   &none       &none      &none     &none     &trans
+&trans  &kp F1   &kp F2   &kp F3     &kp F4     &kp F5             &trans  &trans  &trans  &none   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RWIN  &trans
 &trans  &kp F11  &kp F12  &none      &none      &none    &trans            &trans          &none   &none       &none      &none     &none     &trans
                           &mkp RCLK  &kp SPACE  &kp TAB                                    &trans  &trans      &trans
             >;
