@@ -227,8 +227,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
-  - {t: '''', s: '"'}
-  - {t: \, s: '|'}
+  - '!'
+  - '@'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -344,7 +344,7 @@ layers:
   - PLAY
   - $$mdi:volume-off$$
 combos:
-- p: [1, 14]
+- p: [1, 2]
   k: {t: '`', s: '~'}
   l: [DEFAULT]
 - p: [2, 15]
