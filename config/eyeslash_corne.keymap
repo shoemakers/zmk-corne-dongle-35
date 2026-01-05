@@ -115,6 +115,14 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
+
+        combo_del {
+            bindings = <&kp DEL>;
+            key-positions = <9 10>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
     };
 
     keymap {
