@@ -569,6 +569,21 @@ rect.held, rect.combo.held {
 <a href="#Fun">
 <text x="0" y="24" class="key hold layer-activator">Fun</text>
 </a></g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
+<text x="112" y="42" class="combo tap">`</text>
+<text x="112" y="31" class="combo shifted">~</text>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="31" class="combo tap">[</text>
+<text x="168" y="20" class="combo shifted">{</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="210" y="18" width="28" height="26" class="combo"/>
+<text x="224" y="31" class="combo tap">]</text>
+<text x="224" y="20" class="combo shifted">}</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-Nav">
