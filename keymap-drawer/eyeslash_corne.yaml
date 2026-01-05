@@ -257,7 +257,7 @@ combos:
   l: [DEFAULT]
 - p: [30, 31]
   k: {t: mouse, h: toggle}
-  l: [DEFAULT]
+  l: [DEFAULT, mouse]
 - p: [9, 10]
   k: $$mdi:backspace-reverse-outline$$
   l: [DEFAULT]
