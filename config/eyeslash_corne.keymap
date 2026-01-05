@@ -113,7 +113,7 @@
             key-positions = <30 31>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         combo_del {
