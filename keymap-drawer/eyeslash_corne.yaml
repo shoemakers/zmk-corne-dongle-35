@@ -344,12 +344,12 @@ layers:
   - PLAY
   - $$mdi:volume-off$$
 combos:
-- p: [1, 2]
+- p: [1, 14]
   k: {t: '`', s: '~'}
   l: [DEFAULT]
-- p: [2, 3]
+- p: [2, 15]
   k: {t: '[', s: '{'}
   l: [DEFAULT]
-- p: [3, 4]
+- p: [3, 16]
   k: {t: ']', s: '}'}
   l: [DEFAULT]
