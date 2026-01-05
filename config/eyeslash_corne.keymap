@@ -190,16 +190,5 @@
             sensor-bindings = <&scroll_encoder>;
             label = "Fun";
         };
-
-        media {
-            bindings = <
-&none  &none  &none  &none  &none  &none                  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
-                     &none  &none  &none                                &none  &none  &none
-            >;
-
-            label = "Media";
-        };
     };
 };
