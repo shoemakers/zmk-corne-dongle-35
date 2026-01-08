@@ -103,19 +103,11 @@
         };
 
         combo_insert {
-            bindings = <&kp INS>;
+            bindings = <&kp LS(INS)>;
             key-positions = <8 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
             layers = <0>;
-        };
-
-        combo_mouse {
-            bindings = <&tog 2>;
-            key-positions = <30 31>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            layers = <0 2>;
         };
 
         combo_del {
