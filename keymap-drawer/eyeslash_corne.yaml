@@ -253,11 +253,8 @@ combos:
   k: $$mdi:apple-keyboard-caps$$
   l: [DEFAULT]
 - p: [8, 9]
-  k: INS
+  k: Sft+INS
   l: [DEFAULT]
-- p: [30, 31]
-  k: {t: mouse, h: toggle}
-  l: [DEFAULT, mouse]
 - p: [9, 10]
   k: $$mdi:backspace-reverse-outline$$
   l: [DEFAULT]
