@@ -110,8 +110,8 @@
             layers = <0>;
         };
 
-        combo_del {
-            bindings = <&kp DEL>;
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
             key-positions = <9 10>;
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
