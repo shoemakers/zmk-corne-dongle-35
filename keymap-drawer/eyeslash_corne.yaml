@@ -46,7 +46,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-space$$', h: Nav}
   - {t: '$$mdi:keyboard-tab$$', h: mouse}
-  - {t: '$$mdi:backspace$$', h: Fun}
+  - {t: '$$mdi:keyboard-tab$$', h: Fun}
   - {t: '$$mdi:keyboard-return$$', h: num}
   - $$mdi:apple-keyboard-shift$$
   Nav:
@@ -144,8 +144,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   num:
   - {t: '$$mdi:transfer$$', type: trans}
