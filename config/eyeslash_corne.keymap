@@ -115,7 +115,7 @@
             key-positions = <9 10>;
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 1>;
         };
     };
 
@@ -137,10 +137,10 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)  &kp LC(V)      &kp LC(LS(Z))                                &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)  &kp RC(C)  &kp RC(X)      &kp RC(Z)  &none
-&none  &kp LEFT_WIN  &kp LALT   &kp LCTRL  &kp LSHIFT     &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS       &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &none
-&none  &kp LC(A)     &none      &none      &kp LC(LA(A))  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INS        &kp HOME   &kp PG_UP  &kp PAGE_DOWN  &kp END    &none
-                                &none      &none          &none                                                                         &kp BACKSPACE  &kp ENTER  &kp DEL
+&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)  &kp LC(V)      &kp LC(LS(Z))                                &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)  &kp RC(C)   &kp RC(X)      &kp RC(Z)  &none
+&none  &kp LEFT_WIN  &kp LALT   &kp LCTRL  &kp LSHIFT     &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CAPS       &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT  &none
+&none  &kp LC(A)     &none      &none      &kp LC(LA(A))  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp INS        &kp HOME   &kp PG_UP   &kp PAGE_DOWN  &kp END    &none
+                                &none      &none          &none                                                                         &kp TAB        &kp ENTER  &kp RSHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
