@@ -249,12 +249,3 @@ combos:
 - p: [2, 3]
   k: $$mdi:keyboard-esc$$
   l: [DEFAULT]
-- p: [3, 4]
-  k: $$mdi:apple-keyboard-caps$$
-  l: [DEFAULT]
-- p: [8, 9]
-  k: Sft+INS
-  l: [DEFAULT]
-- p: [9, 10]
-  k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [DEFAULT, Nav]
