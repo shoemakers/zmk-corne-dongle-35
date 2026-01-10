@@ -588,9 +588,9 @@ rect.held, rect.combo.held {
 <tspan x="756" dy="-0.6em">Sft+</tspan><tspan x="756" dy="1.2em">INS</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="803" y="22" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
+<g class="combo backspace combopos-3">
+<rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo backspace"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="803" y="22" height="18" width="18.0" class="combo backspace tap glyph mdi:backspace"/>
 </g>
 </g>
 </g>

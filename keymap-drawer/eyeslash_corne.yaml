@@ -256,5 +256,5 @@ combos:
   k: Sft+INS
   l: [DEFAULT]
 - p: [9, 10]
-  k: $$mdi:backspace-reverse-outline$$
+  k: {t: '$$mdi:backspace$$', type: backspace}
   l: [DEFAULT]
