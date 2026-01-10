@@ -93,30 +93,6 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-
-        combo_casp {
-            bindings = <&kp CAPS>;
-            key-positions = <3 4>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_insert {
-            bindings = <&kp LS(INS)>;
-            key-positions = <8 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <9 10>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            layers = <0 1>;
-        };
     };
 
     keymap {
