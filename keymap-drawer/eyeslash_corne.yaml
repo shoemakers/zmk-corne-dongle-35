@@ -44,10 +44,10 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:keyboard-tab$$', h: Nav}
-  - {t: '$$mdi:keyboard-space$$', h: mouse}
+  - {t: '$$mdi:keyboard-space$$', h: Nav}
+  - {t: '$$mdi:keyboard-tab$$', h: mouse}
   - {t: '$$mdi:keyboard-return$$', h: Fun}
-  - {t: '$$mdi:keyboard-tab$$', h: num}
+  - {t: '$$mdi:backspace$$', h: num}
   - $$mdi:apple-keyboard-shift$$
   Nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
