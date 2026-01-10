@@ -95,9 +95,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-shift$$
   mouse:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-esc$$
@@ -257,4 +257,4 @@ combos:
   l: [DEFAULT]
 - p: [9, 10]
   k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [DEFAULT]
+  l: [DEFAULT, Nav]
