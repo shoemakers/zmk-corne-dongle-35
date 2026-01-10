@@ -95,8 +95,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
   mouse:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -144,8 +144,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   num:
   - {t: '$$mdi:transfer$$', type: trans}
