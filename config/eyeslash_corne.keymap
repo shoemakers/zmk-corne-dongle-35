@@ -10,14 +10,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define KEYS_L 1 2 3 4 5 14 15 16 17 18 29 30 31 32 33  // Left-hand keys.
-#define KEYS_R 7 8 9 10 11 22 23 24 25 26 36 37 38 39 40  // Right-hand keys.
-#define THUMBS 42 43 44 45 46 47                                      // Thumb keys.
-#define WIN   0
-#define RIG   1
-#define LEF   2
-#define TRI   3
-#define MOUSE 4
+
+#define DEFAULT   0
+#define NAV       1
+#define MOUSE     2
+#define NUM       3
+#define FUN       4
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -98,7 +96,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default {
             display-name = "DEFAULT";
             bindings = <
 &none  &kp Q        &kp W        &kp E             &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P           &none
