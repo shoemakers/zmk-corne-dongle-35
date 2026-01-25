@@ -62,11 +62,10 @@
             // 意思是：开始时按住 Alt，中间过程按 Tab，结束时松开 Alt
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
             // 1000 毫秒（1秒）没动作就自动确认切换
-            timeout-ms = <1000>;
+            timeout-ms = <500>;
             // 关键：把你的导航键索引填在这里
             // 这样当你按这些键时，Swapper 会保持 Alt 按下状态
-            // ignored-key-positions = <LT2 RT2 LH1 RM1 RM4>;
-            ignored-key-positions = <3 9 43 23 26>;
+            ignored-key-positions = <LT2 RT2 LH1 RM1 RM4>;
         };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
