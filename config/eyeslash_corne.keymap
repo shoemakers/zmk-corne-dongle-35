@@ -132,7 +132,7 @@
         combo_colon { key-positions = <RM3 RM4>; bindings = <&kp COLON>; }; // L + ;
 
         combo_caps_word {
-            key-positions = <LH0 RH0>; 
+            key-positions = <LM0 RM0>; 
             bindings = <&caps_word>;
         };
     };
