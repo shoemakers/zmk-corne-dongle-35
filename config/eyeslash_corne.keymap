@@ -65,12 +65,20 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
-        // 1. 智能数字层 (urob 风格)
-        // 输入数字、小数点、运算符号时保持在数字层，按空格或回车自动切回
+        // 第一部分：定义“监控逻辑”和“白名单”
         num_word: num_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <BACKSPACE ENTER DOT PLUS MINUS STAR SLASH EQUAL>;
+            continue-list = <BACKSPACE ENTER DOT PLUS MINUS STAR SLASH EQUAL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+        };
+
+        // 第二部分：定义“分发逻辑”（什么时候开启监控）
+        smart_num: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&num_word>; // 这里只需调用上面定义的 num_word
         };
 
         // 2. 快速粘滞键 (Sticky Key)
