@@ -27,5 +27,8 @@ manifest:
     - name: zmk-helpers # 增加urob的配置
       remote: urob
       revision: main
+    - name: zmk-tri-state # 添加这个项目
+      remote: urob
+      revision: main
   self:
     path: config
