@@ -79,13 +79,15 @@
             // 1500毫秒无动作自动退出
             timeout-ms = <1500>;
             
+            // 在哪些层下不进行超时计时（通常包含鼠标层本身）
+            // 这里的 MOUSE, NAV 等需要对应你的层索引数字
+            ignored-layers = <MOUSE NAV>;
+            
             // 哪些按键按下后会重置计时器，不导致层退出
             // 这里的 MOUSE_KEEP_ALIVE_INS 是你在上面定义的物理索引宏
             ignored-key-positions = <MOUSE_KEEP_ALIVE_INS>;
             
-            // 在哪些层下不进行超时计时（通常包含鼠标层本身）
-            // 这里的 MOUSE, NAV 等需要对应你的层索引数字
-            ignored-layers = <1 2 4>;
+
         };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
