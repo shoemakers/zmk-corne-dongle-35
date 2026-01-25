@@ -81,7 +81,7 @@
             ignored-layers = <1 2>;
             // 哪些按键按下后会重置计时器，不导致层退出
             // 这里的 MOUSE_KEEP_ALIVE_INS 是你在上面定义的物理索引宏
-            ignored-key-positions = <22 23 24 25 26>;
+            ignored-key-positions = <5 7 22 23 24 25 26>;
         };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
