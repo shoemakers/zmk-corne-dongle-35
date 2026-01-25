@@ -1,4 +1,4 @@
-
+ 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 
@@ -190,10 +190,9 @@
         combo_rshift {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RB4 RB5>; 
+            key-positions = <RB3 RB4>; 
             bindings = <&kp RSHIFT>;
         };
-
        // ==========================================
         // 1. 主行三连括号 - 绝对镜像对称
         // ==========================================
@@ -230,13 +229,13 @@
         combo_lbrc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LM4 LM5>; // F + G
+            key-positions = <LM3 LM4>; // F + G
             bindings = <&kp LBRC>;
         };
         combo_rbrc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RM4 RM5>; // J + H
+            key-positions = <RM3 RM4>; // J + H
             bindings = <&kp RBRC>;
         };
 
