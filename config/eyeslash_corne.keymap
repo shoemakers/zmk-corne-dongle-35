@@ -65,7 +65,8 @@
             timeout-ms = <1000>;
             // 关键：把你的导航键索引填在这里
             // 这样当你按这些键时，Swapper 会保持 Alt 按下状态
-            ignored-key-positions = <LT2 RT2 LH1 RM1 RM4>;
+            // ignored-key-positions = <LT2 RT2 LH1 RM1 RM4>;
+            ignored-key-positions = <3 9 43 23 26>;
         };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
