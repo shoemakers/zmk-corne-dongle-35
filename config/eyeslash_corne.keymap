@@ -55,6 +55,15 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE ENTER DOT PLUS MINUS STAR SLASH EQUAL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
         };
+        // 窗口切换神器
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            // 意思是：开始时按住 Alt，中间过程按 Tab，结束时松开 Alt
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            // 1000 毫秒（1秒）没动作就自动确认切换
+            timeout-ms = <1000>;
+        };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -135,6 +144,10 @@
             key-positions = <LM0 RM0>; 
             bindings = <&caps_word>;
         };
+        combo_swapper {
+            key-positions = <LT2 RT2>; 
+            bindings = <&swapper>;
+        }
     };
 
     keymap {
