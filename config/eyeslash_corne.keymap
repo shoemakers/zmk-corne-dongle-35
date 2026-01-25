@@ -249,20 +249,20 @@
 
         combo_smart_num {
             timeout-ms = <40>;
-            key-positions = <LT1 RT1>; // R + U
+            key-positions = <LT2 RT2>; // R + U
             bindings = <&smart_num>;
             layers = <0>;
         };
 
         combo_swapper {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            key-positions = <LT2 RT2>; 
+            key-positions = <LT1 RT1>; 
             bindings = <&swapper>;
         };
 
         combo_caps_word {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <LM1 LM2 LM3>; // S + D + F
             bindings = <&caps_word>;
         };
