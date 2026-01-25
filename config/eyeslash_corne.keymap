@@ -130,6 +130,16 @@
             quick-release;
             ignore-modifiers; // 核心：忽略修饰键干扰，避开系统连击判定
         };
+
+        thumb_num: thumb_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&smart_num>;
+        };
+    
         // 定义一个名为 thumb_mouse 的行为
         thumb_mouse: thumb_mouse {
             compatible = "zmk,behavior-hold-tap";
@@ -285,10 +295,10 @@
         default {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U             &kp I         &kp O        &kp P           &none
-&none  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RSHIFT J     &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
-&none  &kp Z        &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M             &kp COMMA     &kp DOT      &kp FSLH        &none
-                                 &lt 4 ESC     &lt 1 SPACE    &lt 2 TAB                                                                &mo 4        &thumb_mouse 3 0  &skq RSHIFT
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y             &kp U             &kp I         &kp O        &kp P           &none
+&none  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H             &hmr RSHIFT J     &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
+&none  &kp Z        &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N             &kp M             &kp COMMA     &kp DOT      &kp FSLH        &none
+                                 &lt 4 ESC     &lt 1 SPACE    &lt 2 TAB                                                                &thumb_mouse 4 0  &thumb_num 3 0    &skq RSHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
