@@ -144,44 +144,109 @@
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
-
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <30>;
-        require-prior-idle-ms = <150>;
 
-        // 左手效率键
-        combo_esc { key-positions = <LT1 LT2>; bindings = <&kp ESC>; };   // W + E
-        combo_tab { key-positions = <LT2 LT3>; bindings = <&kp TAB>; };   // E + R
-
-        // 右手效率键
-        combo_bspc  { key-positions = <RT2 RT1>; bindings = <&kp BSPC>; }; // I + O
-        combo_enter { key-positions = <RM2 RM3>; bindings = <&kp ENTER>; }; // K + L
-        
-        // 符号快捷键
-        combo_colon { key-positions = <RM3 RM4>; bindings = <&kp COLON>; }; // L + ;
-
-        combo_caps_word {
-            key-positions = <LM0 RM0>; 
-            bindings = <&caps_word>;
+        // --- 1. 功能类 (横向) ---
+        combo_esc {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LT2 LT3>; // W + E
+            bindings = <&kp ESC>;
         };
-        combo_swapper {
-            key-positions = <LT2 RT2>; 
-            bindings = <&swapper>;
+
+        combo_tab {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LT1 LT2>; // Q + W
+            bindings = <&kp TAB>;
         };
-        /* 智能鼠标层 Combo: T + Y */
+
+        combo_enter {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RM2 RM3>; // K + L (回车位置最顺手)
+            bindings = <&kp RET>;
+        };
+
+        combo_bspc {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RT2 RT3>; // I + O
+            bindings = <&kp BSPC>;
+        };
+
+        // --- 2. 括号与符号类 (主行/下排对称优化) ---
+        // 圆括号 ( ) -> 食指+中指 (最常用，放最舒服的位置)
+        combo_lpar {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LM3 LM4>; // D + F
+            bindings = <&kp LPAR>; 
+        };
+        combo_rpar {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RM3 RM4>; // J + K
+            bindings = <&kp RPAR>; 
+        };
+
+        // 中括号 [ ] -> 向外挪一格，避开 Enter
+        combo_lbkt {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LM2 LM3>; // S + D
+            bindings = <&kp LBKT>; 
+        };
+        combo_rbkt {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RM1 RM2>; // L + ; (避开了 K+L 的 Enter)
+            bindings = <&kp RBKT>; 
+        };
+
+        // 大括号 { } -> 下排对称
+        combo_lbrc {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LB2 LB3>; // X + C
+            bindings = <&kp LBRC>; 
+        };
+        combo_rbrc {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RB1 RB2>; // . + /
+            bindings = <&kp RBRC>; 
+        };
+
+        // --- 3. 智能模式与高级功能 ---
         combo_smart_mouse {
             timeout-ms = <40>;
-            key-positions = <LT0 RT0>; 
+            key-positions = <LT0 RT0>; // T + Y
             bindings = <&smart_mouse>;
-            layers = <0>; // 仅在基础层生效，防止在鼠标层内误触发导致状态混乱
+            layers = <0>;
         };
+
         combo_smart_num {
             timeout-ms = <40>;
-            key-positions = <LT1 RT1>; // Eyelash 42 的 R 和 U
+            key-positions = <LT1 RT1>; // R + U
             bindings = <&smart_num>;
             layers = <0>;
         };
+
+        combo_swapper {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <LT2 RT2>; 
+            bindings = <&swapper>;
+        };
+
+        combo_caps_word {
+            timeout-ms = <30>;
+            key-positions = <LM2 LM3 LM4>; // S + D + F
+            bindings = <&caps_word>;
+        };
+
     };
 
     keymap {
