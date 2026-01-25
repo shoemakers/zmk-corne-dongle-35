@@ -43,14 +43,6 @@
 
 / {
     behaviors {
-        smart_mouse: smart_mouse {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&tog 5>, <&none>, <&tog 5>; // 5 是 MOUSE 层索引
-            timeout-ms = <1500>;
-            // 白名单：摇杆(6,19,20,21,35)、旋钮(34)、右手鼠标键(23,24,25,26)、拇指(43,44)
-            ignored-key-positions = <LT4 LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LEC JS0 JS1 JS2 JS3 JS4 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4 RH0 RH1 RH2 LH2 LH1 LH0>;
-        };
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
@@ -158,14 +150,6 @@
         combo_swapper {
             key-positions = <LT2 RT2>; 
             bindings = <&swapper>;
-        };
-
-        // LT4(1) + RT4(11) 触发智能鼠标
-        combo_smart_mouse {
-            timeout-ms = <50>;
-            key-positions = <LT4 TR4>; 
-            bindings = <&smart_mouse>;
-            layers = <0>; // 仅在主层生效
         };
     };
 
