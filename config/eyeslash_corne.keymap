@@ -17,7 +17,6 @@
 #define NUM       3
 #define FUN       4
 
-#include "zmk-helpers/key-labels/eyelash42.h"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
