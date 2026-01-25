@@ -81,7 +81,30 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+        timeout-ms = <30>;
+        require-prior-idle-ms = <150>;
+
+        /* 使用 eyelash42.h 中的定义：
+           LT = Left Top,  LM = Left Middle,  LB = Left Bottom
+           RT = Right Top, RM = Right Middle, RB = Right Bottom
+        */
+
+        // 左手常用：W+E = Esc, E+R = Tab
+        combo_esc { key-positions = <LT1 LT2>; bindings = <&kp ESC>; };
+        combo_tab { key-positions = <LT2 LT3>; bindings = <&kp TAB>; };
+
+        // 右手常用：I+O = Backspace, K+L = Enter
+        combo_bspc  { key-positions = <RT2 RT1>; bindings = <&kp BSPC>; };
+        combo_enter { key-positions = <RM2 RM3>; bindings = <&kp ENTER>; };
+        
+        // 符号快捷：L + 分号 = 冒号 (Qwerty)
+        combo_colon { key-positions = <RM3 RM4>; bindings = <&kp COLON>; };
+        
+        // 双手拇指并弹：进入设置层 (如果你有这个需求)
+        combo_sys_layer { key-positions = <LH1 RH1>; bindings = <&mo 3>; };
+    };
 
     keymap {
         compatible = "zmk,keymap";
