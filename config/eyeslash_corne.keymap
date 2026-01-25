@@ -16,6 +16,9 @@
 #define NUM       3
 #define FUN       4
 
+#define CONFIG_WIRELESS
+#include "zmk-helpers/key-labels/eyelash42.h"
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -84,7 +87,7 @@
         default {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P           &none
+&none  &kp LT1       &kp LT2     &kp LT3       &kp LT4        &kp LT5                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P           &none
 &none  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RSHIFT J    &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
 &none  &kp Z        &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH        &none
                                  &lt 4 ESC     &lt 1 SPACE    &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE  &kp RSHIFT
