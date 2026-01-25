@@ -19,6 +19,7 @@
 #define FUN       4
 
 #define SMART_NUM &smart_num 3 0
+#define MOUSE_KEEP_ALIVE_INS LM4 LM3 LM2 LM1 LM0 LT4 LT3 LT2 LT1 LT0 RM1 RM2 RM3 RM4 sRB1 RB2 RB3 RB4 RH0 RH1 RH2
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
@@ -66,6 +67,25 @@
             // 关键：把你的导航键索引填在这里
             // 这样当你按这些键时，Swapper 会保持 Alt 按下状态
             ignored-key-positions = <LT2 RT2 LH1 RM1 RM4>;
+        };
+        // 这里的 smart_mouse 对应你原有的宏定义
+        smart_mouse: smart_mouse {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            
+            // 行为定义：[开始时执行], [中间执行], [结束时执行]
+            bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+            
+            // 1500毫秒无动作自动退出
+            timeout-ms = <1500>;
+            
+            // 哪些按键按下后会重置计时器，不导致层退出
+            // 这里的 MOUSE_KEEP_ALIVE_INS 是你在上面定义的物理索引宏
+            ignored-key-positions = <MOUSE_KEEP_ALIVE_INS>;
+            
+            // 在哪些层下不进行超时计时（通常包含鼠标层本身）
+            // 这里的 MOUSE, NAV 等需要对应你的层索引数字
+            ignored-layers = <1 2 4>;
         };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
@@ -150,6 +170,13 @@
         combo_swapper {
             key-positions = <LT2 RT2>; 
             bindings = <&swapper>;
+        };
+        /* 智能鼠标层 Combo: T + Y */
+        combo_smart_mouse {
+            timeout-ms = <40>;
+            key-positions = <LT0 RT0>; 
+            bindings = <&smart_mouse>;
+            layers = <0>; // 仅在基础层生效，防止在鼠标层内误触发导致状态混乱
         };
     };
 
