@@ -147,7 +147,7 @@
         combo_swapper {
             key-positions = <LT2 RT2>; 
             bindings = <&swapper>;
-        }
+        };
     };
 
     keymap {
