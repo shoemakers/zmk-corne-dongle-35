@@ -180,7 +180,7 @@
             bindings = <&kp BSPC>;
         };
         // shift: 右手主行边缘 (. + /)
-        combo_enter {
+        combo_shift {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <RB4 RB5>; 
