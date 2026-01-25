@@ -2,11 +2,11 @@ layout: {zmk_keyboard: eyeslash_corne}
 layers:
   DEFAULT:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - LT1
+  - LT2
+  - LT3
+  - LT4
+  - LT5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - Y
   - U
