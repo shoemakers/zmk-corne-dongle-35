@@ -115,7 +115,7 @@
         combo_tab { key-positions = <LT2 LT3>; bindings = <&kp TAB>; };
 
         // 右手常用：I+O = Backspace, K+L = Enter
-        combo_bspc  { key-positions = <RT2 RT1>; bindings = <&num_word>; };
+        combo_bspc  { key-positions = <RT2 RT1>; bindings = <SMART_NUM>; };
         combo_bspc  { key-positions = <RT2 RT3>; bindings = <&skq>; };
         combo_enter { key-positions = <RM2 RM3>; bindings = <&kp ENTER>; };
         
