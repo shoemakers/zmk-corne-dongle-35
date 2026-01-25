@@ -83,13 +83,7 @@
 
         // 2. 快速粘滞键 (Sticky Key)
         // 用于 Shift、Ctrl 等，按一下生效一次，双击锁定，连打不误触
-        skq: sticky_key_quick {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>; // 1秒内不按键则自动失效
-            quick-release;             // 关键：防止在快速输入时 Shift 粘连到第二个字母
-        };
+        
     };
 
     rgb_encoder: rgb_encoder {
