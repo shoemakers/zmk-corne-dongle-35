@@ -25,6 +25,9 @@
 #define MOUSE_KEEP_ALIVE_INS LM4 LM3 LM2 LM1 LM0 LT4 LT3 LT2 LT1 LT0 RT0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4 RH0 RH1 RH2
 #define MUM_KEEP_ALIVE_INS KEYS_L THUMBS RT1 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4
 
+#define COMBO_TIMEOUT 30
+#define COMBO_IDLE 150
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -146,77 +149,88 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
     combos {
         compatible = "zmk,combos";
-
-        // --- 1. 功能类 (横向) ---
+        // ESC: 左手上排 (W + E)
         combo_esc {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LT2 LT3>; // W + E
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LT2 LT3>; 
             bindings = <&kp ESC>;
         };
-
+        // TAB: 左手上排边缘 (Q + W)
         combo_tab {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LT1 LT2>; // Q + W
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LT1 LT2>; 
             bindings = <&kp TAB>;
         };
 
+        // Enter: 移至上排边缘 (O + P) 或使用垂直组合
         combo_enter {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RM2 RM3>; // K + L (回车位置最顺手)
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <RT1 RT2>; // O + P
             bindings = <&kp RET>;
         };
 
+        // Backspace: 右手上排 (I + O)
         combo_bspc {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <RT2 RT3>; // I + O
             bindings = <&kp BSPC>;
         };
-
-        // --- 2. 括号与符号类 (主行/下排对称优化) ---
-        // 圆括号 ( ) -> 食指+中指 (最常用，放最舒服的位置)
-        combo_lpar {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LM3 LM4>; // D + F
-            bindings = <&kp LPAR>; 
-        };
-        combo_rpar {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RM3 RM4>; // J + K
-            bindings = <&kp RPAR>; 
+        // shift: 右手主行边缘 (. + /)
+        combo_enter {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <RB4 RB5>; 
+            bindings = <&kp RSHIFT>;
         };
 
-        // 中括号 [ ] -> 向外挪一格，避开 Enter
+       // ==========================================
+        // 1. 主行三连括号 - 绝对镜像对称
+        // ==========================================
+        
+        // 【1】中括号 [ ] -> 最外侧 (无名指 + 中指)
         combo_lbkt {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LM2 LM3>; // S + D
-            bindings = <&kp LBKT>; 
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LM0 LM1>; // S + D
+            bindings = <&kp LBKT>;
         };
         combo_rbkt {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RM1 RM2>; // L + ; (避开了 K+L 的 Enter)
-            bindings = <&kp RBKT>; 
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <RM0 RM1>; // K + L
+            bindings = <&kp RBKT>;
         };
 
-        // 大括号 { } -> 下排对称
+        // 【2】圆括号 ( ) -> 中间 (中指 + 食指)
+        combo_lpar {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LM2 LM3>; // D + F
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <RM2 RM3>; // J + K
+            bindings = <&kp RPAR>;
+        };
+
+        // 【3】大括号 { } -> 最内侧 (食指 + 内侧键G/H)
         combo_lbrc {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LB2 LB3>; // X + C
-            bindings = <&kp LBRC>; 
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LM4 LM5>; // F + G
+            bindings = <&kp LBRC>;
         };
         combo_rbrc {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RB1 RB2>; // . + /
-            bindings = <&kp RBRC>; 
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <RM4 RM5>; // J + H
+            bindings = <&kp RBRC>;
         };
 
         // --- 3. 智能模式与高级功能 ---
