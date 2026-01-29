@@ -342,9 +342,9 @@
 
         Fun {
             bindings = <
-&trans  &kp F10  &kp F7  &kp F8  &kp F9     &bt BT_SEL 0                    &trans          &bt BT_SEL 2  &out OUT_TOG  &none      &none     &bt BT_CLR_ALL  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 3  &kp RSHIFT    &kp RCTRL  &kp RALT  &kp RWIN        &trans
-&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_CLR    &trans            &trans          &bt BT_SEL 4  &none         &none      &none     &none           &trans
+&trans  &kp F10  &kp F7  &kp F8  &kp F9     &bt BT_SEL 0                    &trans          &bt BT_SEL 2  &out OUT_TOG  &out OUT_BLE  &out OUT_USB   &bt BT_CLR_ALL  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 3  &kp RSHIFT    &kp RCTRL     &kp RALT       &kp RWIN        &trans
+&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_CLR    &trans            &trans          &bt BT_SEL 4  &none         &none         &none          &none           &trans
                          &none   &kp SPACE  &kp TAB                                         &trans        &trans        &trans
             >;
 
