@@ -1,4 +1,3 @@
- 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 
@@ -17,14 +16,11 @@
 #define MOUSE     2
 #define NUM       3
 #define FUN       4
-
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
-
 #define MOUSE_KEEP_ALIVE_INS LM4 LM3 LM2 LM1 LM0 LT4 LT3 LT2 LT1 LT0 RT0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4 RH0 RH1 RH2
 #define MUM_KEEP_ALIVE_INS KEYS_L THUMBS RT2 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RB4
-
 #define COMBO_TIMEOUT 30
 #define COMBO_IDLE 150
 
@@ -52,56 +48,81 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE UNDERSCORE MINUS>; // 遇到这些键不停止大写
         };
-        
+
         // 窗口切换神器
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
+
             // 意思是：开始时按住 Alt，中间过程按 Tab，结束时松开 Alt
+
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
             // 1000 毫秒（1秒）没动作就自动确认切换
+
             timeout-ms = <500>;
+
             // 关键：把你的导航键索引填在这里
             // 这样当你按这些键时，Swapper 会保持 Alt 按下状态
+
             ignored-key-positions = <LT1 RT1 LH1 RM1 RM4>;
         };
+
         // 这里的 smart_mouse 对应你原有的宏定义
+
         smart_mouse: smart_mouse {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
+
             // 行为定义：[开始时执行], [中间执行], [结束时执行]
+
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+
             // 1500毫秒无动作自动退出
+
             timeout-ms = <1500>;
+
             // 在哪些层下不进行超时计时（通常包含鼠标层本身）
             // 这里的 MOUSE, NAV 等需要对应你的层索引数字
+
             ignored-layers = <1 2>;
+
             // 哪些按键按下后会重置计时器，不导致层退出
             // 这里的 MOUSE_KEEP_ALIVE_INS 是你在上面定义的物理索引宏
+
             ignored-key-positions = <MOUSE_KEEP_ALIVE_INS>;
         };
+
         smart_num: smart_num {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
+
             // 开始：开启 NUM 层 | 中间：无动作 | 结束：关闭 NUM 层
+
             bindings = <&tog NUM>, <&none>, <&tog NUM>;
-            
+
             // 数字层通常不需要太短的超时，甚至可以设长一点
             // 让我们主要依靠“按键动作”来退出
-            timeout-ms = <2000>; 
-            
+
+            timeout-ms = <2000>;
+
             // 关键：包含 NUM 层本身 (3)
+
             ignored-layers = <NUM>;
-            
+
             // 关键：这里填入所有“属于数字层”的按键索引
             // 只要按这些键，数字层就不会关闭。
             // 必须包含：R(4) 和 U(8) 这两个 Combo 触发键！
-            ignored-key-positions = <MUM_KEEP_ALIVE_INS>; 
+
+            ignored-key-positions = <MUM_KEEP_ALIVE_INS>;
         };
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "tap-preferred";
             tapping-term-ms = <280>;
             quick-tap-ms = <200>;                // 快速连打不触发长按
@@ -114,6 +135,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "tap-preferred";
             tapping-term-ms = <280>;
             quick-tap-ms = <200>;
@@ -121,7 +143,9 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
+
         // 1. 简化的快速粘滞键：只负责点按粘滞，不处理双击锁定
+
         skq: sticky_key_quick {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -139,16 +163,19 @@
             quick-tap-ms = <150>;
             bindings = <&mo>, <&smart_num>;
         };
-    
+
         // 定义一个名为 thumb_mouse 的行为
+
         thumb_mouse: thumb_mouse {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
+
             // 第一个绑定是 Hold（长按）：切层
             // 第二个绑定是 Tap（短按）：smart_mouse
+
             bindings = <&mo>, <&smart_mouse>;
         };
     };
@@ -168,24 +195,30 @@
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
+
     combos {
         compatible = "zmk,combos";
+
         // ESC: 左手上排 (W + E)
+
         combo_esc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LT2 LT3>; 
+            key-positions = <LT2 LT3>;
             bindings = <&kp ESC>;
         };
+
         // TAB: 左手上排边缘 (Q + W)
+
         combo_tab {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LT3 LT4>; 
+            key-positions = <LT3 LT4>;
             bindings = <&kp TAB>;
         };
 
         // Enter: 移至上排边缘 (O + P) 或使用垂直组合
+
         combo_enter {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
@@ -194,37 +227,44 @@
         };
 
         // Backspace: 右手上排 (I + O)
+
         combo_bspc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <RT2 RT3>; // I + O
             bindings = <&kp BSPC>;
         };
+
         // shift: 左手主行边缘 (z+x)
+
         combo_lshift {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LB3 LB4>; 
+            key-positions = <LB3 LB4>;
             bindings = <&kp LSHIFT>;
         };
+
         // shift: 右手主行边缘 (. + /)
+
         combo_rshift {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RB3 RB4>; 
+            key-positions = <RB3 RB4>;
             bindings = <&kp RSHIFT>;
         };
-       // ==========================================
+
+        // ==========================================
         // 1. 主行三连括号 - 绝对镜像对称
         // ==========================================
-        
         // 【1】中括号 [ ] -> 最外侧 (无名指 + 中指)
+
         combo_lbkt {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <LM0 LM1>; // S + D
             bindings = <&kp LBKT>;
         };
+
         combo_rbkt {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
@@ -233,12 +273,14 @@
         };
 
         // 【2】圆括号 ( ) -> 中间 (中指 + 食指)
+
         combo_lpar {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <LM1 LM2>; // D + F
             bindings = <&kp LPAR>;
         };
+
         combo_rpar {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
@@ -247,19 +289,23 @@
         };
 
         // 【3】大括号 { } -> 最内侧 (食指 + 内侧键G/H)
+
         combo_lbrc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <LM3 LM4>; // F + G
             bindings = <&kp LBRC>;
         };
+
         combo_rbrc {
             timeout-ms = <COMBO_TIMEOUT>;
             require-prior-idle-ms = <COMBO_IDLE>;
             key-positions = <RM3 RM4>; // J + H
             bindings = <&kp RBRC>;
         };
+
         // --- 3. 智能模式与高级功能 ---
+
         combo_smart_mouse {
             timeout-ms = <40>;
             key-positions = <LT0 RT0>; // T + Y
@@ -277,7 +323,7 @@
         combo_swapper {
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            key-positions = <LT1 RT1>; 
+            key-positions = <LT1 RT1>;
             bindings = <&swapper>;
         };
 
@@ -294,10 +340,10 @@
         default {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y             &kp U             &kp I         &kp O        &kp P           &none
-&none  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H             &hmr RSHIFT J     &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
-&none  &kp Z        &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N             &kp M             &kp COMMA     &kp DOT      &kp FSLH        &none
-                                 &lt 4 ESC     &lt 1 SPACE    &lt 2 TAB                                                                &lt 4 ENTER       &lt 3 BACKSPACE   &skq RSHIFT
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U            &kp I         &kp O        &kp P           &none
+&none  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RSHIFT J    &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMI  &none
+&none  &kp Z        &kp X        &kp C         &kp V          &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH        &none
+                                 &lt 4 ESC     &lt 1 SPACE    &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE  &skq RSHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -306,9 +352,9 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)    &kp LC(V)      &kp LC(LS(Z))                                &mmv MOVE_UP                     &none      &none          &none               &none          &none      &none
-&none  &kp LEFT_WIN  &kp LALT   &kp LCTRL    &kp LSHIFT     &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS    &kp LEFT       &kp DOWN            &kp UP         &kp RIGHT  &none
-&none  &kp LC(A)     &kp LG(D)  &kp LA(TAB)  &kp LC(LA(A))  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK   &kp HOME       &kp PAGE_DOWN       &kp PG_UP     &kp END    &none
+&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)    &kp LC(V)      &kp LC(LS(Z))                                &mmv MOVE_UP                     &none      &none          &none          &none      &none      &none
+&none  &kp LEFT_WIN  &kp LALT   &kp LCTRL    &kp LSHIFT     &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
+&none  &kp LC(A)     &kp LG(D)  &kp LA(TAB)  &kp LC(LA(A))  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK   &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
                                 &none        &none          &none                                                                         &kp ENTER  &kp BACKSPACE  &kp RSHIFT
             >;
 
@@ -342,9 +388,9 @@
 
         Fun {
             bindings = <
-&trans  &kp F10  &kp F7  &kp F8  &kp F9     &bt BT_SEL 0                    &trans          &bt BT_SEL 2  &out OUT_TOG  &out OUT_BLE  &out OUT_USB   &bt BT_CLR_ALL  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 3  &kp RSHIFT    &kp RCTRL     &kp RALT       &kp RWIN        &trans
-&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_CLR    &trans            &trans          &bt BT_SEL 4  &none         &none         &none          &none           &trans
+&trans  &kp F10  &kp F7  &kp F8  &kp F9     &bt BT_SEL 0                    &trans          &bt BT_SEL 3  &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &bt BT_CLR_ALL  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 4  &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RWIN        &trans
+&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_SEL 2  &trans            &trans          &bt BT_CLR    &none         &none         &none         &none           &trans
                          &none   &kp SPACE  &kp TAB                                         &trans        &trans        &trans
             >;
 
