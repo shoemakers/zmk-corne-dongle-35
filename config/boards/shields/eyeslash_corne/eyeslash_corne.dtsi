@@ -19,14 +19,19 @@
 
     };
 
-	left_encoder: encoder_left {
-		compatible = "alps,ec11";
-		label = "LEFT_ENCODER";
-        steps = <24>;
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
         a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	    b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		status = "disabled";
-	};
+        b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <40>;
+        status = "disabled";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        triggers-per-rotation = <20>;
+        sensors = <&left_encoder>;
+    };
 
     backlight: pwmleds {
         compatible = "pwm-leds";
@@ -35,10 +40,7 @@
         };
     };
 
-    sensors {
-		compatible = "zmk,keymap-sensors";
-		sensors = <&left_encoder>;
-	};
+
 
     kscan0: kscan {
         wakeup-source;
