@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye
-      url-base: https://github.com/GPeye
+    - name: PiXeL16                      
+      url-base: https://github.com/PiXeL16
     - name: tokyo2006
       url-base: https://github.com/tokyo2006
     - name: englmaxi
@@ -11,9 +11,9 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
   projects:
-    - name: hammerbeam-slideshow
-      remote: gpeye
-      revision: main 
+    - name: zmk-landscape-slideshow         
+      remote: PiXeL16                    
+      revision: main                      
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
