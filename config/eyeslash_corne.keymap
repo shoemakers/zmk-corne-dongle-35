@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 #include "zmk-helpers/key-labels/eyelash42.h"
-# 增加自定义图片配置
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT   0
