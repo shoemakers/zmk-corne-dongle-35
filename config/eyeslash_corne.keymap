@@ -205,17 +205,13 @@
             bindings = <&kp ESC>;
         };
 
-        // TAB: 左手上排边缘 (Q + W)
-        // Enter: 移至上排边缘 (O + P) 或使用垂直组合
-        // Backspace: 右手上排 (I + O)
-        // shift: 左手主行边缘 (z+x)
-        // shift: 右手主行边缘 (. + /)
-        // ==========================================
-        // 1. 主行三连括号 - 绝对镜像对称
-        // ==========================================
-        // 【1】中括号 [ ] -> 最外侧 (无名指 + 中指)
-        // 【2】圆括号 ( ) -> 中间 (中指 + 食指)
-        // 【3】大括号 { } -> 最内侧 (食指 + 内侧键G/H)
+        // shift: 左手 (s + l)
+        combo_shift {
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE>;
+            key-positions = <LM3 RM3>;
+            bindings = <&kp LSHIFT>;
+        };
         // --- 3. 智能模式与高级功能 ---
 
         combo_smart_mouse {
