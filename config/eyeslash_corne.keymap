@@ -340,10 +340,10 @@
         default {
             display-name = "DEFAULT";
             bindings = <
-&none  &kp Q          &kp W         &kp E      &kp R            &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U             &kp I      &kp O         &kp P                &none
-&none  &hml LSHIFT A  &hml LCTRL S  &kp D      &hml LEFT_ALT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RIGHT_ALT J  &kp K      &hmr RCTRL L  &hmr RSHIFT SEMI     &none
-&none  &hml LWIN Z    &kp X         &kp C      &kp V            &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M             &kp COMMA  &kp DOT       &hmr RIGHT_WIN FSLH  &none
-                                    &lt 4 ESC  &lt 1 SPACE      &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE   &skq DEL
+&none  &kp Q        &kp W          &kp E         &kp R            &kp T                                   &mmv MOVE_UP                     &kp Y        &kp U             &kp I         &kp O          &kp P           &none
+&none  &hml LWIN A  &hml LSHIFT S  &hml LCTRL D  &hml LEFT_ALT F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &hmr RIGHT_ALT J  &hmr RCTRL K  &hmr RSHIFT L  &hmr RWIN SEMI  &none
+&none  &kp Z        &kp X          &kp C         &kp V            &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M             &kp COMMA     &kp DOT        &kp FSLH        &none
+                                   &lt 4 ESC     &lt 1 SPACE      &lt 2 TAB                                                                &lt 4 ENTER  &lt 3 BACKSPACE   &skq DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -352,10 +352,10 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &kp LC(Z)        &kp LC(X)  &kp LC(C)    &kp LC(V)      &kp LC(LS(Z))                                &mmv MOVE_UP                     &none      &none          &none          &none      &none      &none
-&none  &kp LSHIFT       &kp LCTRL  &none        &kp LEFT_ALT   &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
-&none  &hml LWIN LC(A)  &kp LG(D)  &kp LA(TAB)  &kp LC(LA(A))  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK   &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
-                                   &none        &none          &none                                                                         &kp ENTER  &kp BACKSPACE  &kp RSHIFT
+&none  &none      &none       &none        &none          &none                                  &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)      &kp RC(C)      &kp RC(X)  &kp RC(Z)  &none
+&none  &kp RWIN   &kp LSHIFT  &kp LCTRL    &kp LEFT_ALT   &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
+&none  &kp LC(A)  &kp LG(D)   &kp LA(TAB)  &kp LC(LA(A))  &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK       &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
+                              &none        &none          &none                                                                   &kp ENTER      &kp BACKSPACE  &kp RSHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -364,10 +364,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&none  &kp ESC     &mkp MB4   &mkp MCLK  &mkp MB5      &none                                  &mmv MOVE_UP                     &none      &none           &none           &none         &none            &none
-&none  &kp LSHIFT  &kp LCTRL  &none      &kp LEFT_ALT  &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &kp LWIN    &none      &none      &none         &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                              &none      &none         &none                                                                   &mkp LCLK  &mkp RCLK       &mkp MCLK
+&none  &kp ESC   &mkp LCLK   &mkp MCLK  &mkp RCLK     &none                                  &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)       &kp RC(C)       &kp RC(X)     &kp RC(Z)        &none
+&none  &kp LWIN  &kp RSHIFT  &kp LCTRL  &kp LEFT_ALT  &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none     &none       &none      &none         &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                             &none      &none         &none                                                                   &kp ENTER      &kp BACKSPACE   &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -376,10 +376,10 @@
 
         Num {
             bindings = <
-&trans  &kp LEFT_BRACKET  &kp N7  &kp N8   &kp N9  &kp RIGHT_BRACKET                    &trans          &none     &none          &none      &none      &none       &trans
-&trans  &kp SQT           &kp N4  &kp N5   &kp N6  &kp EQUAL                    &trans  &trans  &trans  &kp RWIN  &kp RIGHT_ALT  &none      &kp RCTRL  &kp RSHIFT  &trans
-&trans  &kp GRAVE         &kp N1  &kp N2   &kp N3  &kp BSLH           &trans            &trans          &none     &kp SEMI       &kp COMMA  &kp DOT    &kp FSLH    &trans
-                                  &kp DOT  &kp N0  &kp MINUS                                            &trans    &trans         &trans
+&trans  &kp LEFT_BRACKET  &kp N7  &kp N8   &kp N9  &kp RIGHT_BRACKET                    &trans          &none   &none          &none      &none       &none     &trans
+&trans  &kp SQT           &kp N4  &kp N5   &kp N6  &kp EQUAL                    &trans  &trans  &trans  &none   &kp RIGHT_ALT  &kp RCTRL  &kp RSHIFT  &kp RWIN  &trans
+&trans  &kp GRAVE         &kp N1  &kp N2   &kp N3  &kp BSLH           &trans            &trans          &none   &kp SEMI       &kp COMMA  &kp DOT     &kp FSLH  &trans
+                                  &kp DOT  &kp N0  &kp MINUS                                            &trans  &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -389,8 +389,8 @@
         Fun {
             bindings = <
 &trans  &kp F10  &kp F7  &kp F8  &kp F9     &bt BT_SEL 0                    &trans          &bt BT_SEL 3  &out OUT_TOG   &out OUT_BLE  &out OUT_USB  &bt BT_CLR_ALL  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 4  &kp RIGHT_ALT  &none         &kp RCTRL     &kp RSHIFT      &trans
-&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_SEL 2  &trans            &trans          &bt BT_CLR    &none          &none         &none         &kp RWIN        &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6     &bt BT_SEL 1            &trans  &trans  &trans  &bt BT_SEL 4  &kp RIGHT_ALT  &kp RCTRL     &kp RSHIFT    &kp RWIN        &trans
+&trans  &kp F12  &kp F1  &kp F2  &kp F3     &bt BT_SEL 2  &trans            &trans          &bt BT_CLR    &none          &none         &none         &none           &trans
                          &none   &kp SPACE  &kp TAB                                         &trans        &trans         &trans
             >;
 
