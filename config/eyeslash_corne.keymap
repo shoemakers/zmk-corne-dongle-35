@@ -86,8 +86,8 @@
             00 00 00 00 0f f0 7f fc 3f fc 00 00 00 00 00 00 00 00 00 00
         ];
     };
-
-    nice_view_bitmaps: nice_view_bitmaps {
+    /* 将这里的名称从 nice_view_bitmaps 改为 status_screen_bitmaps */
+    status_screen_bitmaps: status_screen_bitmaps {
         compatible = "zmk,lvgl-bitmap-collection";
         bitmaps = <&bitmap_happy &bitmap_fortune>;
     };
