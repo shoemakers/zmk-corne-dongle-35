@@ -39,7 +39,6 @@
 };
 
 / {
-
     behaviors {
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
@@ -207,101 +206,16 @@
         };
 
         // TAB: 左手上排边缘 (Q + W)
-
-        combo_tab {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LT3 LT4>;
-            bindings = <&kp TAB>;
-        };
-
         // Enter: 移至上排边缘 (O + P) 或使用垂直组合
-
-        combo_enter {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RM2 RM3>; // O + P
-            bindings = <&kp RET>;
-        };
-
         // Backspace: 右手上排 (I + O)
-
-        combo_bspc {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RT2 RT3>; // I + O
-            bindings = <&kp BSPC>;
-        };
-
         // shift: 左手主行边缘 (z+x)
-
-        combo_lshift {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LB3 LB4>;
-            bindings = <&kp LSHIFT>;
-        };
-
         // shift: 右手主行边缘 (. + /)
-
-        combo_rshift {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RB3 RB4>;
-            bindings = <&kp RSHIFT>;
-        };
-
         // ==========================================
         // 1. 主行三连括号 - 绝对镜像对称
         // ==========================================
         // 【1】中括号 [ ] -> 最外侧 (无名指 + 中指)
-
-        combo_lbkt {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LM0 LM1>; // S + D
-            bindings = <&kp LBKT>;
-        };
-
-        combo_rbkt {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RM0 RM1>; // K + L
-            bindings = <&kp RBKT>;
-        };
-
         // 【2】圆括号 ( ) -> 中间 (中指 + 食指)
-
-        combo_lpar {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LM1 LM2>; // D + F
-            bindings = <&kp LPAR>;
-        };
-
-        combo_rpar {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RM1 RM2>; // J + K
-            bindings = <&kp RPAR>;
-        };
-
         // 【3】大括号 { } -> 最内侧 (食指 + 内侧键G/H)
-
-        combo_lbrc {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <LM3 LM4>; // F + G
-            bindings = <&kp LBRC>;
-        };
-
-        combo_rbrc {
-            timeout-ms = <COMBO_TIMEOUT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-            key-positions = <RM3 RM4>; // J + H
-            bindings = <&kp RBRC>;
-        };
-
         // --- 3. 智能模式与高级功能 ---
 
         combo_smart_mouse {
@@ -350,10 +264,10 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&none  &none      &none       &none        &none          &none                                  &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)      &kp RC(C)      &kp RC(X)  &kp RC(Z)  &none
-&none  &kp RWIN   &kp LSHIFT  &kp LCTRL    &kp LEFT_ALT   &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
-&none  &kp LC(A)  &kp LG(D)   &kp LA(TAB)  &kp LC(LA(A))  &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK       &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
-                              &none        &none          &none                                                                   &kp ENTER      &kp BACKSPACE  &kp RSHIFT
+&none  &none      &kp LC(A)   &kp LC(LA(A))  &none         &none                                        &mmv MOVE_UP                     &none      &none          &none          &none      &none      &none
+&none  &kp RWIN   &kp LSHIFT  &kp LCTRL      &kp LEFT_ALT  &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INS    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
+&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)      &kp LC(V)     &kp LC(LA(Z))  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CLCK   &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
+                              &none          &none         &none                                                                         &kp ENTER  &kp BACKSPACE  &kp RSHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -362,10 +276,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&none  &kp ESC   &mkp LCLK   &mkp MCLK  &mkp RCLK     &none                                  &mmv MOVE_UP                     &kp RC(RS(Z))  &kp RC(V)       &kp RC(C)       &kp RC(X)     &kp RC(Z)        &none
-&none  &kp LWIN  &kp RSHIFT  &kp LCTRL  &kp LEFT_ALT  &kp DEL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none     &none       &none      &none         &none    &kp C_MUTE                    &mmv MOVE_DOWN                   &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                             &none      &none         &none                                                                   &kp ENTER      &kp BACKSPACE   &none
+&none  &kp ESC    &mkp LCLK   &mkp MCLK  &mkp RCLK     &none                                        &mmv MOVE_UP                     &none      &none           &none           &none         &none            &none
+&none  &kp LWIN   &kp RSHIFT  &kp LCTRL  &kp LEFT_ALT  &kp DEL                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)     &kp LC(LS(Z))  &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                              &none      &none         &none                                                                         &kp ENTER  &kp BACKSPACE   &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
