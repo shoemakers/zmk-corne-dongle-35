@@ -46,27 +46,6 @@
 
 / {
 
-    // 定义位图节点
-    node_happy: node_happy {
-        compatible = "zmk,lvgl-bitmap";
-        data = <&img_happy_data>;
-        width = <160>;
-        height = <68>;
-    };
-
-    node_fortune: node_fortune {
-        compatible = "zmk,lvgl-bitmap";
-        data = <&img_fortune_data>;
-        width = <160>;
-        height = <68>;
-    };
-
-    // 组合为轮播集合
-    nice_view_bitmaps: nice_view_bitmaps {
-        compatible = "zmk,lvgl-bitmap-collection";
-        bitmaps = <&node_happy &node_fortune>;
-    };
-
     behaviors {
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
